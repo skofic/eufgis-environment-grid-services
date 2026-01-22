@@ -1,0 +1,96 @@
+{
+    "name": "Grid-Environmental-Services",
+    "version": "0.0.1",
+    "description": "Remote sensing and climate data services provided from a geographic grids.",
+    "engines": {
+        "arangodb": "^3.0.0"
+    },
+    "author": "Milko Škofič",
+    "license": "Apache 2",
+    "main": "main.js",
+    "scripts": {
+        "setup": "scripts/setup.js",
+        "teardown": "scripts/teardown.js"
+    },
+    "configuration": {
+        "collectionChelsa": {
+            "description": "Chelsa collection name",
+            "type": "string",
+            "required": true,
+            "default": "Chelsa"
+        },
+        "collectionWorldClim": {
+            "description": "WorldClim collection name",
+            "type": "string",
+            "required": true,
+            "default": "WorldClim"
+        },
+        "collectionDroughtObservatory": {
+            "description": "DroughtObservatory collection name",
+            "type": "string",
+            "required": true,
+            "default": "DroughtObservatory"
+        },
+        "collectionDroughtObservatoryMap": {
+            "description": "DroughtObservatoryMap collection name",
+            "type": "string",
+            "required": true,
+            "default": "DroughtObservatoryMap"
+        },
+        "collectionShapes": {
+            "description": "Unit geometries collection name",
+            "type": "string",
+            "required": true,
+            "default": "Shapes"
+        },
+        "collectionShapeData": {
+            "description": "Shapes remote sensing collection name",
+            "type": "string",
+            "required": true,
+            "default": "ShapeData"
+        },
+        "collectionUnitData": {
+            "description": "Units remote sensing collection name",
+            "type": "string",
+            "required": true,
+            "default": "UnitData"
+        },
+        "collectionUnitShapes": {
+            "description": "UnitShapes collection name",
+            "type": "string",
+            "required": true,
+            "default": "UnitPolygons"
+        },
+        "collectionDataset": {
+            "description": "Dataset collection name",
+            "type": "string",
+            "required": true,
+            "default": "Dataset"
+        },
+        "collectionUnit": {
+            "description": "Units collection name",
+            "type": "string",
+            "required": true,
+            "default": "Units"
+        },
+        "viewDataset": {
+            "description": "Dataset view name",
+            "type": "string",
+            "required": true,
+            "default": "VIEW_DATASET"
+        },
+        "viewShape": {
+            "description": "Shapes view name",
+            "type": "string",
+            "required": true,
+            "default": "VIEW_SHAPE"
+        },
+        "viewUnitsShape": {
+            "description": "Unit shapes view name",
+            "type": "string",
+            "required": true,
+            "default": "VIEW_UNIT_SHAPE"
+        }
+    },
+    "tests": "test/**/*.js"
+}

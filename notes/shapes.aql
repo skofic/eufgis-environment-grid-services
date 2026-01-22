@@ -1,0 +1,26 @@
+///
+// Return all shapes within range.
+///
+FOR doc IN Shapes
+    FILTER doc.properties.topography.@descriptor >= @min
+    FILTER doc.properties.topography.@descriptor <= @max
+    SORT doc.properties.topography.@descriptor @order
+    LIMIT @start, @count
+RETURN MERGE(
+	{ geometry_hash: doc._key },
+	UNSET(doc, '_id', '_key', '_rev')
+)
+
+///
+// Return shapes within distance range.
+///
+FOR doc IN Shapes
+    LET target = @target
+    LET distance = GEO_DISTANCE(target, doc.geometry, "wgs84")
+    FILTER distance < @closer
+    SORT distance @order
+    LIMIT @start, @count
+RETURN MERGE(
+	{ geometry_hash: doc._key, distance: distance },
+	UNSET(doc, '_id', '_key', '_rev')
+)
