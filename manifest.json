@@ -1,6 +1,6 @@
 {
     "name": "Grid-Environmental-Services",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Remote sensing and climate data services provided from a geographic grids.",
     "engines": {
         "arangodb": "^3.0.0"
