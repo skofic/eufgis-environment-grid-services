@@ -1,4 +1,4 @@
-# Grid Environmental Data Services
+# EUFGIS Grid Environmental Data Services
 
 This [repository](https://github.com/skofic/environmental-services.git) contains the [ArangoDB](https://www.arangodb.com/) [Foxx micro service](https://www.arangodb.com/docs/stable/foxx.html) for publishing *remote sensing* and *climate data* related published in the [EUFGIS](http://www.eufgis.org) information system.
 
