@@ -450,7 +450,7 @@ The records are served and searched using a view:
 1. You must first either install [ArangoDB](https://www.arangodb.com), or have an existing database available.
 2. *Create* or *select* an existing *database*.
 3. In the `Services` *left tab* press the `+ Add service` button.
-4. Select the `GitHub` *top tab*, set the `Repository` field to **skofic/env-grid-data-services** and the `Version` field to **main**; press the `Install` button.
+4. Select the `GitHub` *top tab*, set the `Repository` field to **skofic/eufgis-environment-grid-services** and the `Version` field to **main**; press the `Install` button.
 5. An alert will be presented requesting the `Mount point` for the service, you can provide *any suitable value*, ensure the `Run setup?` checkbox is *checked*. Press the `Install` button.
 
 At this point the service will do the following actions:
