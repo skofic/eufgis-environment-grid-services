@@ -11,11 +11,6 @@ const documentCollections = {
 	"dataset": module.context.configuration.collectionDataset,
 	"drought_observatory": module.context.configuration.collectionDroughtObservatory,
 	"drought_observatory_map": module.context.configuration.collectionDroughtObservatoryMap,
-	"shape_data": module.context.configuration.collectionShapeData,
-	"shapes": module.context.configuration.collectionShapes,
-	"unit_data": module.context.configuration.collectionUnitData,
-	"unit_shapes": module.context.configuration.collectionUnitShapes,
-	"unit": module.context.configuration.collectionUnit,
 	"worldclim": module.context.configuration.collectionWorldClim
 }
 const edgeCollections = {
@@ -25,89 +20,6 @@ const edgeCollections = {
 // Views.
 ///
 const views = {
-	"shapes": {
-		"name": module.context.configuration.viewShape,
-		"type": "arangosearch",
-		"properties": {
-			"links": {
-				"Shapes": {
-					"analyzers": [
-						"identity"
-					],
-					"fields": {
-						"_key": {},
-						"geometry": {
-							"analyzers": [
-								"geojson"
-							]
-						},
-						"geometry_bounds": {
-							"analyzers": [
-								"geojson"
-							]
-						},
-						"properties": {
-							"fields": {
-								"chr_AvElevation": {},
-								"chr_StdElevation": {},
-								"gcu_id_number": {},
-								"chr_AvSlope": {},
-								"geo_shape_area": {},
-								"chr_AvAspect": {},
-								"chr_MinElevation": {},
-								"chr_MaxElevation": {}
-							}
-						}
-					},
-					"includeAllFields": false,
-					"storeValues": "none",
-					"trackListPositions": false
-				}
-			}
-		}
-	},
-	"units": {
-		"name": module.context.configuration.viewUnitsShape,
-		"type": "arangosearch",
-		"properties": {
-			"links": {
-				"UnitPolygons": {
-					"analyzers": [
-						"identity"
-					],
-					"fields": {
-						"_key": {},
-						"geometry": {
-							"analyzers": [
-								"geojson"
-							]
-						},
-						"geometry_bounds": {
-							"analyzers": [
-								"geojson"
-							]
-						},
-						"geometry_hash_list": {},
-						"properties": {
-							"fields": {
-								"chr_AvElevation": {},
-								"chr_StdElevation": {},
-								"gcu_id_number": {},
-								"chr_AvSlope": {},
-								"geo_shape_area": {},
-								"chr_AvAspect": {},
-								"chr_MinElevation": {},
-								"chr_MaxElevation": {}
-							}
-						}
-					},
-					"includeAllFields": false,
-					"storeValues": "none",
-					"trackListPositions": false
-				}
-			}
-		}
-	},
 	"dataset": {
 		"name": module.context.configuration.viewDataset,
 		"type": "arangosearch",

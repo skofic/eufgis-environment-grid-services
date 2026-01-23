@@ -1,6 +1,8 @@
 # Grid Environmental Data Services
 
-This [repository](https://github.com/skofic/environmental-services.git) contains the [ArangoDB](https://www.arangodb.com/) [Foxx micro service](https://www.arangodb.com/docs/stable/foxx.html) for publishing *remote sensing* and *climate data* related to dynamic conservation units of forest trees, published in the [EUFGIS](http://www.eufgis.org) information system.
+This [repository](https://github.com/skofic/environmental-services.git) contains the [ArangoDB](https://www.arangodb.com/) [Foxx micro service](https://www.arangodb.com/docs/stable/foxx.html) for publishing *remote sensing* and *climate data* related published in the [EUFGIS](http://www.eufgis.org) information system.
+
+This set of services concentrates on data stored in layers of geographic grids in different resolutions, while another set of services concentrate on data characterising the geographic boundaries of conservation units.
 
 This work is being conducted for the [upgrade](https://www.forgenius.eu/eufgis) of the [EUFGIS](http://www.eufgis.org/) information system within the framework of the [FORGENIUS](https://www.forgenius.eu/) project.
 
@@ -19,7 +21,7 @@ This work is being conducted for the [upgrade](https://www.forgenius.eu/eufgis) 
 
 ## Database
 
-The database is implemented using [ArangoDB](https://www.arangodb.com/). The data is not included in this repository, you will have to run a [Google Earth Engine](https://earthengine.google.com/) [Colab](https://colab.research.google.com/) sheet to populate the remote sensing data, and a series of scripts can be used to download, clip, process, combine and merge [Chelsa](https://chelsa-climate.org/), [WorldClim](https://worldclim.org/) and [EDO](https://edo.jrc.ec.europa.eu/edov2/php/index.php?id=1000) data, all this is available in [this](https://github.com/skofic/ClimateService.git) repository.
+The database is implemented using [ArangoDB](https://www.arangodb.com/). The data is not included in this repository, you will have to run a series of scripts to download, clip, process, combine and merge [Chelsa](https://chelsa-climate.org/), [WorldClim](https://worldclim.org/) and [EDO](https://edo.jrc.ec.europa.eu/edov2/php/index.php?id=1000) data, all this is available in [this](https://github.com/skofic/ClimateService.git) repository.
 
 The database contains the following collections:
 
@@ -231,244 +233,9 @@ All *data variables* are *documented* in the [data dictionary](https://github.co
 
 Both the `geometry_point` and the `geometry_bounds` fields are indexed with type `geo`. The point geometry is used to select by distance, while the polygon geometry is used for all other geometry searches.
 
-### Shapes
-
-Each *dynamic conservation unit* can be *divided* or *partitioned* into one or more *geographic shapes* of which *averaged* climatic and remote sensing *data is made available*. The idea is to distinguish specific topographic or biological regions, within the conservation unit, and link these polygons or multi-polygons to a set of data records contained in the `ShapeData` collection.
-
-#### Data
-
-Each record represents a *geometry* that can either be a polygon or a *multi-polygon*. The geometry is *characterised* by *topographic information* and is *referenced* by *time series* data stored in the `ShapeData` collection.
-
-Records are structured as follows:
-
-```json
-{
-  "_key": "9ed33336159e121b4b0a733c09afa3c4",
-  "std_dataset_ids": [
-    /* data */
-  ],
-  "properties": {
-    "chr_AvElevation": 720.3393477368861,
-    "chr_AvSlope": 3.946183211837736,
-    "chr_StdElevation": 15.414407563646472,
-    "geo_shape_area": 211311.56794387152,
-    "chr_AvAspect": 186.5400898699804
-  },
-  "geometry": {
-    "type": "Polygon",
-    "coordinates": [ /* data */ ]
-  },
-  "geometry_bounds": {
-    "type": "Polygon",
-    "geodesic": false,
-    "coordinates": [ /* data */ ]
-  }
-}
-```
-
-The `_key` represents the *primary key* of the record, it is the *[MD5](https://en.wikipedia.org/wiki/MD5) hash* of the `geometry_bounds` field, this value will be used in the `ShapeData` collection to *reference* the *corresponding geometry*.
-
-The `std_dataset_ids` field contains the *list* of all *datasets* featuring data for the current record; the values are *references* to the corresponding `Dataset` records.
-
-The `properties` field contains *averaged topographic data* related to the current shape area, `geometry`. Note that all *other* data referring to the shape is stored in the `ShapeData` collection.
-
-The `geometry` contains the geometry in [GeoJSON](https://geojson.org) format. It may either be a `Polygon` or a `MultiPolygon`, in the latter case data is averaged on all enclosed polygons. All *data* referring to the current shape is *averaged* on this *geometry*.
-
-The `geometry_bounds` contains the [GeoJSON](https://geojson.org)  bounding box expressed as a polygon.
-
-All properties are documented in the [data dictionary](https://github.com/skofic/data-dictionary-service.git).
-
-#### View
-
-This collection is referenced and indexed using a view:
-
-```json
-{
-  "name": "VIEW_SHAPE",
-  "type": "arangosearch",
-  "links": {
-    "Shapes": {
-      "analyzers": [
-        "identity"
-      ],
-      "fields": {
-        "_key": {},
-        "geometry": {
-          "analyzers": [
-            "geojson"
-          ]
-        },
-        "properties": {
-          "fields": {
-            "chr_StdElevation": {},
-            "geo_shape_area": {},
-            "chr_AvAspect": {},
-            "chr_AvElevation": {},
-            "chr_AvSlope": {}
-          }
-        },
-        "std_dataset_ids": {}
-      },
-      "includeAllFields": false,
-      "storeValues": "none",
-      "trackListPositions": false
-    }
-  }
-}
-```
-
-### ShapeData
-
-This collection contains all data related to the `Shapes` collection. All data is grouped by *shape*, *date span* and *date*.
-
-#### Data
-
-The collection currently contains over 47 million records, the size depends on the number of shapes and the date ranges. Each record represents the *data* of a geometry, *period* (*either daily, monthly or annual*) and for a specific *date*:
-
-```json
-{
-  "geometry_hash": "fffb23800ee30d6d375209178d2aa8fa",
-  "std_date_span": "std_date_span_day",
-  "std_date": "20020924",
-  "properties": {
-    "chr_RelHumid": 77.64464378356934,
-    "env_climate_slhf": -523102.2151717557,
-    "env_climate_snsrad": 2490879.274758454,
-    "env_climate_soil_temp_100": 286.17160225885215,
-    "env_climate_soil_temp_28": 281.53329886613614,
-    "env_climate_soil_temp_289": 288.1548304327269,
-    "env_climate_soil_temp_7": 280.5713157945008,
-    "env_climate_soil_water_100": 0.1484261311344215,
-    "env_climate_soil_water_28": 0.09974415854339987,
-    "env_climate_soil_water_289": 0.24916233179223451,
-    "env_climate_soil_water_7": 0.09919899777905027,
-    "env_climate_tpr": 0.18919283813317658,
-    "env_climate_wind": 3.872064370471018,
-    "env_climate_temp-2m": 281.08772537483816
-  },
-  "std_terms": [
-    "chr_RelHumid",
-    "env_climate_wind",
-    "env_climate_slhf",
-    "env_climate_snsrad",
-    "env_climate_soil_temp_100",
-    "env_climate_tpr",
-    "env_climate_soil_temp_28",
-    "env_climate_soil_water_289",
-    "env_climate_soil_temp_289",
-    "env_climate_temp-2m",
-    "env_climate_soil_temp_7",
-    "env_climate_soil_water_100",
-    "env_climate_soil_water_28",
-    "env_climate_soil_water_7"
-  ],
-  "std_dataset_ids": [
-    "5f9c61fc-8a82-41b5-b2ae-42c0068cfb6e"
-  ]
-}
-```
-
-The `geometry_hash` points to the `Shapes` record, it is the [MD5](https://en.wikipedia.org/wiki/MD5) hash of the shape `geometry` property.
-
-The `std_date_span` field represents the *time period* associated with the measurement: `std_date_span_day` for *daily* data, `std_date_span_month` for *monthly* averages and `std_date_span_year` for *yearly* averages.
-
-The `std_date` field represents the measurement *date* in `YYYYMMDD` format, `Y` for year, `M` for month and `D` for day. Daily data requires the full date, monthly data can omit the month and yearly data can omit month and day.
-
-The `properties` field contains the remote sensing data *averaged for the current geometry*.
-
-The `std_terms` field contains the *list* of featured *data properties*.
-
-The `std_dataset_ids` field contains the *list* of referenced *datasets*, the values are *links* to `Dataset` collection records.
-
-All properties are documented in the [data dictionary](https://github.com/skofic/data-dictionary-service.git).
-
-#### Indexes
-
-The collection features three indexes, besides the default primary key:
-
-- An index comprising the `geometry_hash`, `std_date_span` and `std_date`, respectively representing the *geometry*, the *date span* and the *date*. This index is *unique*.
-- An index comprising the `geometry_hash` and `std_dataset_ids[*]`, respectively representing the *geometry* and the individual *dataset references*.
-- An index comprising the `geometry_hash` and `std_terms[*]`, respectively representing the *geometry* and the individual featured *data property references*.
-
-### UnitData
-
-This collection contains all data related to the `Shapes` collection at the *unit* level. Each record averages data for all geometries belonging to the conservation unit.
-
-```json
-{
-  "gcu_id_number": "ROU00202",
-  "std_date_span": "std_date_span_day",
-  "std_date": "20191205",
-  "std_dataset_ids": [
-    "5f9c61fc-8a82-41b5-b2ae-42c0068cfb6e"
-  ],
-  "std_terms": [
-    "chr_RelHumid",
-    "env_climate_wind",
-    "env_climate_slhf",
-    "env_climate_snsrad",
-    "env_climate_soil_temp_100",
-    "env_climate_tpr",
-    "env_climate_soil_temp_28",
-    "env_climate_soil_water_289",
-    "env_climate_soil_temp_289",
-    "env_climate_temp-2m",
-    "env_climate_soil_temp_7",
-    "env_climate_soil_water_100",
-    "env_climate_soil_water_28",
-    "env_climate_soil_water_7"
-  ],
-  "properties": {
-    "chr_RelHumid": 74.21861330668132,
-    "env_climate_slhf": -377741.5833333333,
-    "env_climate_snsrad": 2864526,
-    "env_climate_soil_temp_100": 280.44324493408203,
-    "env_climate_soil_temp_28": 275.2173487345378,
-    "env_climate_soil_temp_289": 286.51777331034344,
-    "env_climate_soil_temp_7": 273.4369519551595,
-    "env_climate_soil_water_100": 0.31182416280110675,
-    "env_climate_soil_water_28": 0.3526102701822917,
-    "env_climate_soil_water_289": 0.33695093790690106,
-    "env_climate_temp-2m": 271.1625150044759,
-    "env_climate_tpr": 0.000014901161193847656,
-    "env_climate_wind": 1.1208266067016894,
-    "env_climate_soil_water_7": 0.3541552225748698
-  }
-}
-```
-
-The properties are the same, except that the geometry reference is replaced by the unit reference. The indexes are the same, with the unit reference in place of the shape reference.
-
-### UnitPolygons
-
-This collection links the *unit number* with the *geometry identifiers*, it is used to *group* all *geometries* belonging to a *conservation unit*.
-
-#### Data
-
-The data contains the *unit number* and the *list of shape references* belonging to that unit:
-
-```json
-{
-  "gcu_id_number": "ALB00002",
-  "geometry_hash_list": [
-    "554a3bb9ef58e60223845bfa6e78a6ad"
-  ]
-}
-```
-
-The `gcu_id_number` is the *identifier* of the *conservation unit*.
-
-The `geometry_hash_list` references the `Shapes` record primary key, it is the [MD5](https://en.wikipedia.org/wiki/MD5) hash of the [GeoJSON](https://geojson.org) geometry.
-
-All properties are documented in the [data dictionary](https://github.com/skofic/data-dictionary-service.git).
-
-#### Indexes
-
-All fields feature an index: `gcu_id_number` and `geometry_hash_list[*]`.
-
 ### DroughtObservatory
 
-This collection contains over 1.2 billion records from the [European Drought Observatory](https://edo.jrc.ec.europa.eu/edov2/php/index.php?id=1000) repository. It is a collection of measurements subdivided into a set of 1km., 5km. and 25 km. resolution grids covering the European region. Each record references a *specific layer cell* and *date*, all dates are daily.
+This collection currently contains over 1.2 billion records from the [European Drought Observatory](https://edo.jrc.ec.europa.eu/edov2/php/index.php?id=1000) repository. It is a collection of measurements subdivided into a set of 1km., 5km. and 25 km. resolution grids covering the European region. Each record references a *specific layer cell* and *date*, all dates are daily.
 
 #### Data
 
@@ -537,7 +304,7 @@ The `geometry` field contains the [GeoJSON](https://geojson.org) *geometry* of t
 
 The `geometry_point` field contains the [GeoJSON](https://geojson.org) *point* representing the *center* of the *grid cell*.
 
-The `geometry_point_radius` field represents the *latitude radius*, in *decimal degrees*, of the *grid cell*: it represents the *grid resolution*.
+The `geometry_point_radius` field represents the resolution of the *grid cell*. The value is the distance between the centroids of *two adjacent grid cells*, *divided by 2* and expressed in *decimal degrees*.
 
 All properties are documented in the [data dictionary](https://github.com/skofic/data-dictionary-service.git).
 
@@ -683,7 +450,7 @@ The records are served and searched using a view:
 1. You must first either install [ArangoDB](https://www.arangodb.com), or have an existing database available.
 2. *Create* or *select* an existing *database*.
 3. In the `Services` *left tab* press the `+ Add service` button.
-4. Select the `GitHub` *top tab*, set the `Repository` field to **skofic/environmental-services** and the `Version` field to **main**; press the `Install` button.
+4. Select the `GitHub` *top tab*, set the `Repository` field to **skofic/env-grid-data-services** and the `Version` field to **main**; press the `Install` button.
 5. An alert will be presented requesting the `Mount point` for the service, you can provide *any suitable value*, ensure the `Run setup?` checkbox is *checked*. Press the `Install` button.
 
 At this point the service will do the following actions:
@@ -693,12 +460,8 @@ At this point the service will do the following actions:
     - The *WorldClim* collection that will hold all WorldClim data.
     - The *DroughtObservatory*  collection to store EDO data.
     - The *DroughtObservatoryMap* collection to store the EDO grid.
-    - The *Shapes* collection to store all conservation unit shapes.
-    - The *ShapeData* collection to store all conservation unit shape remote sensing data.
-    - The *UnitShapes* collection to store conservation unit references to shapes.
     - The *Dataset* collection to store all datasets metadata.
 2. It will create the necessary *views*, if not already there:
-    - The *VIEW_SHAPE* view to manage conservation unit shapes.
     - The *VIEW_DATASET* view to manage datasets metadata.
 
 You will see that in the `Services` *left tab* there is a *top tab* called `Settings`: this can be used to *customise* the collection and view names.
