@@ -50,7 +50,1133 @@
         },
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "geometry_hash": {
+                        "type": "string",
+                        "example": "317606bc3212a52de247fac77dfde752"
+                      },
+                      "geometry_point": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "example": "Point"
+                          },
+                          "coordinates": {
+                            "type": "number",
+                            "items": {
+                              "type": "number"
+                            }
+                          }
+                        }
+                      },
+                      "geometry_bounds": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "example": "Polygon"
+                          },
+                          "coordinates": {
+                            "type": "object",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "array",
+                                "items": {
+                                  "type": "number"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "properties": {
+                        "type": "object",
+                        "properties": {
+                          "1981-2010": {
+                            "type": "object",
+                            "properties": {
+                              "env_climate_ai": {
+                                "type": "number"
+                              },
+                              "env_climate_bio01": {
+                                "type": "number"
+                              },
+                              "env_climate_bio02": {
+                                "type": "number"
+                              },
+                              "env_climate_bio03": {
+                                "type": "number"
+                              },
+                              "env_climate_bio04": {
+                                "type": "number"
+                              },
+                              "env_climate_bio05": {
+                                "type": "number"
+                              },
+                              "env_climate_bio06": {
+                                "type": "number"
+                              },
+                              "env_climate_bio07": {
+                                "type": "number"
+                              },
+                              "env_climate_bio08": {
+                                "type": "number"
+                              },
+                              "env_climate_bio09": {
+                                "type": "number"
+                              },
+                              "env_climate_bio10": {
+                                "type": "number"
+                              },
+                              "env_climate_bio11": {
+                                "type": "number"
+                              },
+                              "env_climate_bio12": {
+                                "type": "number"
+                              },
+                              "env_climate_bio13": {
+                                "type": "number"
+                              },
+                              "env_climate_bio14": {
+                                "type": "number"
+                              },
+                              "env_climate_bio15": {
+                                "type": "number"
+                              },
+                              "env_climate_bio16": {
+                                "type": "number"
+                              },
+                              "env_climate_bio17": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 221
+                              },
+                              "env_climate_bio18": {
+                                "type": "number"
+                              },
+                              "env_climate_bio19": {
+                                "type": "number"
+                              },
+                              "env_climate_clt_max": {
+                                "type": "number"
+                              },
+                              "env_climate_clt_mean": {
+                                "type": "number"
+                              },
+                              "env_climate_clt_min": {
+                                "type": "number"
+                              },
+                              "env_climate_clt_range": {
+                                "type": "number"
+                              },
+                              "env_climate_cmi_max": {
+                                "type": "number"
+                              },
+                              "env_climate_cmi_mean": {
+                                "type": "number"
+                              },
+                              "env_climate_cmi_min": {
+                                "type": "number"
+                              },
+                              "env_climate_cmi_range": {
+                                "type": "number"
+                              },
+                              "env_climate_fcf": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 128
+                              },
+                              "env_climate_fgd": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 122
+                              },
+                              "env_climate_gdd0": {
+                                "type": "number"
+                              },
+                              "env_climate_gdd10": {
+                                "type": "number"
+                              },
+                              "env_climate_gdd5": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 1527
+                              },
+                              "env_climate_gddlgd0": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 323
+                              },
+                              "env_climate_gddlgd10": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 279
+                              },
+                              "env_climate_gddlgd5": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 303
+                              },
+                              "env_climate_gdgfgd0": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 62
+                              },
+                              "env_climate_gdgfgd10": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 136
+                              },
+                              "env_climate_gdgfgd5": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 99
+                              },
+                              "env_climate_gsl": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 198
+                              },
+                              "env_climate_gsp": {
+                                "type": "number"
+                              },
+                              "env_climate_gst": {
+                                "type": "number"
+                              },
+                              "env_climate_hurs_max": {
+                                "type": "number"
+                              },
+                              "env_climate_hurs_mean": {
+                                "type": "number"
+                              },
+                              "env_climate_hurs_min": {
+                                "type": "number"
+                              },
+                              "env_climate_hurs_range": {
+                                "type": "number"
+                              },
+                              "env_climate_kg0": {
+                                "type": "string",
+                                "example": "env_climate_kg_Dfb"
+                              },
+                              "env_climate_kg1": {
+                                "type": "string",
+                                "example": "env_climate_kg_Dfb"
+                              },
+                              "env_climate_kg2": {
+                                "type": "string",
+                                "example": "env_climate_kg_Dfb"
+                              },
+                              "env_climate_kg3": {
+                                "type": "string",
+                                "example": "env_climate_kg3_III_F"
+                              },
+                              "env_climate_kg4": {
+                                "type": "string",
+                                "example": "env_climate_kg4_12"
+                              },
+                              "env_climate_kg5": {
+                                "type": "string",
+                                "example": "env_climate_kg5_III_4"
+                              },
+                              "env_climate_lgd": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 319
+                              },
+                              "env_climate_ngd0": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 262
+                              },
+                              "env_climate_ngd10": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 144
+                              },
+                              "env_climate_ngd5": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 205
+                              },
+                              "env_climate_npp": {
+                                "type": "number"
+                              },
+                              "env_climate_pet_penman_max": {
+                                "type": "number"
+                              },
+                              "env_climate_pet_penman_mean": {
+                                "type": "number"
+                              },
+                              "env_climate_pet_penman_min": {
+                                "type": "number"
+                              },
+                              "env_climate_pet_penman_range": {
+                                "type": "number"
+                              },
+                              "env_climate_rsds_max": {
+                                "type": "number"
+                              },
+                              "env_climate_rsds_mean": {
+                                "type": "number"
+                              },
+                              "env_climate_rsds_min": {
+                                "type": "number"
+                              },
+                              "env_climate_rsds_range": {
+                                "type": "number"
+                              },
+                              "env_climate_scd": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 152
+                              },
+                              "env_climate_sfcWind_max": {
+                                "type": "number"
+                              },
+                              "env_climate_sfcWind_mean": {
+                                "type": "number"
+                              },
+                              "env_climate_sfcWind_min": {
+                                "type": "number"
+                              },
+                              "env_climate_sfcWind_range": {
+                                "type": "number"
+                              },
+                              "env_climate_swb": {
+                                "type": "number"
+                              },
+                              "env_climate_swe": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 164
+                              },
+                              "env_climate_vpd_max": {
+                                "type": "number"
+                              },
+                              "env_climate_vpd_mean": {
+                                "type": "number"
+                              },
+                              "env_climate_vpd_min": {
+                                "type": "number"
+                              },
+                              "env_climate_vpd_range": {
+                                "type": "number"
+                              },
+                              "std_date_span_month": {
+                                "type": "object",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "std_month": {
+                                      "type": "integer"
+                                    },
+                                    "env_climate_pr": {
+                                      "type": "number"
+                                    },
+                                    "env_climate_tas": {
+                                      "type": "number"
+                                    },
+                                    "env_climate_tasmin": {
+                                      "type": "number"
+                                    },
+                                    "env_climate_tasmax": {
+                                      "type": "number"
+                                    }
+                                  }
+                                }
+                              },
+                              "env_climate_pr": {
+                                "type": "number"
+                              },
+                              "env_climate_tas": {
+                                "type": "number"
+                              },
+                              "env_climate_tasmax": {
+                                "type": "number"
+                              },
+                              "env_climate_tasmin": {
+                                "type": "number"
+                              }
+                            }
+                          },
+                          "2011-2040": {
+                            "type": "object",
+                            "properties": {
+                              "MPI-ESM1-2-HR": {
+                                "type": "object",
+                                "properties": {
+                                  "ssp370": {
+                                    "type": "object",
+                                    "properties": {
+                                      "env_climate_bio01": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio02": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio03": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio04": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio05": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio06": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio07": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio08": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio09": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio11": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio12": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio13": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio14": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio15": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio16": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 322
+                                      },
+                                      "env_climate_bio17": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio18": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 322
+                                      },
+                                      "env_climate_bio19": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_fcf": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 130
+                                      },
+                                      "env_climate_fgd": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 117
+                                      },
+                                      "env_climate_gdd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 2947
+                                      },
+                                      "env_climate_gdd10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gdd5": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gddlgd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 327
+                                      },
+                                      "env_climate_gddlgd10": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 282
+                                      },
+                                      "env_climate_gddlgd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 305
+                                      },
+                                      "env_climate_gdgfgd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 57
+                                      },
+                                      "env_climate_gdgfgd10": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 128
+                                      },
+                                      "env_climate_gdgfgd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 92
+                                      },
+                                      "env_climate_gsl": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 207
+                                      },
+                                      "env_climate_gsp": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gst": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_kg0": {
+                                        "type": "string",
+                                        "example": "env_climate_kg_Dfb"
+                                      },
+                                      "env_climate_kg1": {
+                                        "type": "string",
+                                        "example": "env_climate_kg_Dfb"
+                                      },
+                                      "env_climate_kg2": {
+                                        "type": "string",
+                                        "example": "env_climate_kg_Dfb"
+                                      },
+                                      "env_climate_kg3": {
+                                        "type": "string",
+                                        "example": "env_climate_kg3_III_F"
+                                      },
+                                      "env_climate_kg4": {
+                                        "type": "string",
+                                        "example": "env_climate_kg4_12"
+                                      },
+                                      "env_climate_kg5": {
+                                        "type": "string",
+                                        "example": "env_climate_kg5_III_9"
+                                      },
+                                      "env_climate_lgd": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 323
+                                      },
+                                      "env_climate_ngd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 271
+                                      },
+                                      "env_climate_ngd10": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 155
+                                      },
+                                      "env_climate_ngd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 214
+                                      },
+                                      "env_climate_npp": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 1158
+                                      },
+                                      "env_climate_scd": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 147
+                                      },
+                                      "env_climate_swe": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 167
+                                      },
+                                      "std_date_span_month": {
+                                        "type": "object",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "std_month": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_pr": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tas": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmin": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmax": {
+                                              "type": "number"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "env_climate_pr": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_tas": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_tasmax": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_tasmin": {
+                                        "type": "number"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "2041-2070": {
+                            "type": "object",
+                            "properties": {
+                              "MPI-ESM1-2-HR": {
+                                "type": "object",
+                                "properties": {
+                                  "ssp370": {
+                                    "type": "object",
+                                    "properties": {
+                                      "env_climate_bio01": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio02": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio03": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio04": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio05": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio06": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio07": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio08": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio09": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio11": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio12": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio13": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio14": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio15": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 11
+                                      },
+                                      "env_climate_bio16": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio17": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio18": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio19": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 258
+                                      },
+                                      "env_climate_fcf": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 160
+                                      },
+                                      "env_climate_fgd": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 107
+                                      },
+                                      "env_climate_gdd0": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gdd10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gdd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 1928
+                                      },
+                                      "env_climate_gddlgd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 332
+                                      },
+                                      "env_climate_gddlgd10": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 287
+                                      },
+                                      "env_climate_gddlgd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 309
+                                      },
+                                      "env_climate_gdgfgd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 46
+                                      },
+                                      "env_climate_gdgfgd10": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 127
+                                      },
+                                      "env_climate_gdgfgd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 91
+                                      },
+                                      "env_climate_gsl": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 222
+                                      },
+                                      "env_climate_gsp": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gst": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_kg0": {
+                                        "type": "string",
+                                        "example": "env_climate_kg_Dfb"
+                                      },
+                                      "env_climate_kg1": {
+                                        "type": "string",
+                                        "example": "env_climate_kg_Dfb"
+                                      },
+                                      "env_climate_kg2": {
+                                        "type": "string",
+                                        "example": "env_climate_kg_Dfb"
+                                      },
+                                      "env_climate_kg3": {
+                                        "type": "string",
+                                        "example": "env_climate_kg3_III_F"
+                                      },
+                                      "env_climate_kg4": {
+                                        "type": "string",
+                                        "example": "env_climate_kg4_12"
+                                      },
+                                      "env_climate_kg5": {
+                                        "type": "string",
+                                        "example": "env_climate_kg5_III_9"
+                                      },
+                                      "env_climate_lgd": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 328
+                                      },
+                                      "env_climate_ngd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 287
+                                      },
+                                      "env_climate_ngd10": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 161
+                                      },
+                                      "env_climate_ngd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 219
+                                      },
+                                      "env_climate_npp": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_scd": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 137
+                                      },
+                                      "env_climate_swe": {
+                                        "type": "number"
+                                      },
+                                      "std_date_span_month": {
+                                        "type": "object",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "std_month": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_pr": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tas": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmin": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmax": {
+                                              "type": "number"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "env_climate_pr": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_tas": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_tasmax": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_tasmin": {
+                                        "type": "number"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "2071-2100": {
+                            "type": "object",
+                            "properties": {
+                              "MPI-ESM1-2-HR": {
+                                "type": "object",
+                                "properties": {
+                                  "ssp370": {
+                                    "type": "object",
+                                    "properties": {
+                                      "env_climate_bio01": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio02": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio03": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio04": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio05": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio06": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio07": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio08": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio09": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio11": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio12": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio13": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio14": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio15": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio16": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio17": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio18": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio19": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_fcf": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 139
+                                      },
+                                      "env_climate_fgd": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 93
+                                      },
+                                      "env_climate_gdd0": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gdd10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gdd5": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gddlgd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 340
+                                      },
+                                      "env_climate_gddlgd10": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 294
+                                      },
+                                      "env_climate_gddlgd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 315
+                                      },
+                                      "env_climate_gdgfgd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 41
+                                      },
+                                      "env_climate_gdgfgd10": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 123
+                                      },
+                                      "env_climate_gdgfgd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 76
+                                      },
+                                      "env_climate_gsl": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 243
+                                      },
+                                      "env_climate_gsp": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_gst": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_kg0": {
+                                        "type": "string",
+                                        "example": "env_climate_kg_Cfb"
+                                      },
+                                      "env_climate_kg1": {
+                                        "type": "string",
+                                        "example": "env_climate_kg_Cfb"
+                                      },
+                                      "env_climate_kg2": {
+                                        "type": "string",
+                                        "example": "env_climate_kg_Dfb"
+                                      },
+                                      "env_climate_kg3": {
+                                        "type": "string",
+                                        "example": "env_climate_kg3_III_F"
+                                      },
+                                      "env_climate_kg4": {
+                                        "type": "string",
+                                        "example": "env_climate_kg4_12"
+                                      },
+                                      "env_climate_kg5": {
+                                        "type": "string",
+                                        "example": "env_climate_kg5_III_3"
+                                      },
+                                      "env_climate_lgd": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 335
+                                      },
+                                      "env_climate_ngd0": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 300
+                                      },
+                                      "env_climate_ngd10": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 172
+                                      },
+                                      "env_climate_ngd5": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 240
+                                      },
+                                      "env_climate_npp": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_scd": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 117
+                                      },
+                                      "env_climate_swe": {
+                                        "type": "number"
+                                      },
+                                      "std_date_span_month": {
+                                        "type": "object",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "std_month": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_pr": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tas": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmin": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmax": {
+                                              "type": "number"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "env_climate_pr": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_tas": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_tasmax": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_tasmin": {
+                                        "type": "number"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "15347"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
+                }
+              }
+            }
           }
         },
         "security": []
@@ -148,7 +1274,96 @@
         },
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "351"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
+                }
+              }
+            }
           }
         },
         "security": []
@@ -225,7 +1440,96 @@
         },
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "141"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
+                }
+              }
+            }
           }
         },
         "security": []
@@ -265,7 +1569,691 @@
         },
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "geometry_hash": {
+                        "type": "string",
+                        "example": "ff80a0aa21b54af2f47ab6addbc2b1d4"
+                      },
+                      "geometry_point": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "example": "Point"
+                          },
+                          "coordinates": {
+                            "type": "number",
+                            "items": {
+                              "type": "number"
+                            }
+                          }
+                        }
+                      },
+                      "geometry_bounds": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "example": "Polygon"
+                          },
+                          "coordinates": {
+                            "type": "object",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "array",
+                                "items": {
+                                  "type": "number"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "properties": {
+                        "type": "object",
+                        "properties": {
+                          "topography": {
+                            "type": "object",
+                            "properties": {
+                              "geo_shape_elevation": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 1047
+                              }
+                            }
+                          },
+                          "1970-2000": {
+                            "type": "object",
+                            "properties": {
+                              "env_climate_bio01": {
+                                "type": "number"
+                              },
+                              "env_climate_bio02": {
+                                "type": "number"
+                              },
+                              "env_climate_bio03": {
+                                "type": "number"
+                              },
+                              "env_climate_bio04": {
+                                "type": "number"
+                              },
+                              "env_climate_bio05": {
+                                "type": "number"
+                              },
+                              "env_climate_bio06": {
+                                "type": "number"
+                              },
+                              "env_climate_bio07": {
+                                "type": "number"
+                              },
+                              "env_climate_bio08": {
+                                "type": "number"
+                              },
+                              "env_climate_bio09": {
+                                "type": "number"
+                              },
+                              "env_climate_bio10": {
+                                "type": "number"
+                              },
+                              "env_climate_bio11": {
+                                "type": "number"
+                              },
+                              "env_climate_bio12": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 973
+                              },
+                              "env_climate_bio13": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 95
+                              },
+                              "env_climate_bio14": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 63
+                              },
+                              "env_climate_bio15": {
+                                "type": "number"
+                              },
+                              "env_climate_bio16": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 268
+                              },
+                              "env_climate_bio17": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 211
+                              },
+                              "env_climate_bio18": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 268
+                              },
+                              "env_climate_bio19": {
+                                "type": "integer",
+                                "format": "int64",
+                                "example": 257
+                              },
+                              "std_date_span_month": {
+                                "type": "object",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "env_climate_pr": {
+                                      "type": "integer"
+                                    },
+                                    "env_climate_srad": {
+                                      "type": "integer"
+                                    },
+                                    "env_climate_tas": {
+                                      "type": "number"
+                                    },
+                                    "env_climate_tasmax": {
+                                      "type": "number"
+                                    },
+                                    "env_climate_tasmin": {
+                                      "type": "number"
+                                    },
+                                    "env_climate_vapr": {
+                                      "type": "number"
+                                    },
+                                    "std_month": {
+                                      "type": "integer"
+                                    },
+                                    "env_climate_wind": {
+                                      "type": "number"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "2021-2040": {
+                            "type": "object",
+                            "properties": {
+                              "MPI-ESM1-2-HR": {
+                                "type": "object",
+                                "properties": {
+                                  "ssp370": {
+                                    "type": "object",
+                                    "properties": {
+                                      "env_climate_bio01": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio02": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio03": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio04": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio05": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio06": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio07": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio08": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 4
+                                      },
+                                      "env_climate_bio09": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio11": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio12": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 987
+                                      },
+                                      "env_climate_bio13": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 101
+                                      },
+                                      "env_climate_bio14": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 61
+                                      },
+                                      "env_climate_bio15": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio16": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 270
+                                      },
+                                      "env_climate_bio17": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 215
+                                      },
+                                      "env_climate_bio18": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 269
+                                      },
+                                      "env_climate_bio19": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 262
+                                      },
+                                      "std_date_span_month": {
+                                        "type": "object",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "std_month": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_pr": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_tasmax": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmin": {
+                                              "type": "number"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "2041-2060": {
+                            "type": "object",
+                            "properties": {
+                              "MPI-ESM1-2-HR": {
+                                "type": "object",
+                                "properties": {
+                                  "ssp370": {
+                                    "type": "object",
+                                    "properties": {
+                                      "env_climate_bio01": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio02": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio03": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio04": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio05": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio06": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio07": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio08": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio09": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio11": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio12": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 960
+                                      },
+                                      "env_climate_bio13": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 92
+                                      },
+                                      "env_climate_bio14": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 59
+                                      },
+                                      "env_climate_bio15": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio16": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 267
+                                      },
+                                      "env_climate_bio17": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 209
+                                      },
+                                      "env_climate_bio18": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 241
+                                      },
+                                      "env_climate_bio19": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 267
+                                      },
+                                      "std_date_span_month": {
+                                        "type": "object",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "std_month": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_pr": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_tasmax": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmin": {
+                                              "type": "number"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "2061-2080": {
+                            "type": "object",
+                            "properties": {
+                              "MPI-ESM1-2-HR": {
+                                "type": "object",
+                                "properties": {
+                                  "ssp370": {
+                                    "type": "object",
+                                    "properties": {
+                                      "env_climate_bio01": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio02": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 10
+                                      },
+                                      "env_climate_bio03": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio04": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio05": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio06": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio07": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio08": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio09": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio11": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio12": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 954
+                                      },
+                                      "env_climate_bio13": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 95
+                                      },
+                                      "env_climate_bio14": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 56
+                                      },
+                                      "env_climate_bio15": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 15
+                                      },
+                                      "env_climate_bio16": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 273
+                                      },
+                                      "env_climate_bio17": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 199
+                                      },
+                                      "env_climate_bio18": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 230
+                                      },
+                                      "env_climate_bio19": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 273
+                                      },
+                                      "std_date_span_month": {
+                                        "type": "object",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "std_month": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_pr": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_tasmax": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmin": {
+                                              "type": "number"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "2081-2100": {
+                            "type": "object",
+                            "properties": {
+                              "MPI-ESM1-2-HR": {
+                                "type": "object",
+                                "properties": {
+                                  "ssp370": {
+                                    "type": "object",
+                                    "properties": {
+                                      "env_climate_bio01": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio02": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio03": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio04": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio05": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio06": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio07": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio08": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio09": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio10": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio11": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio12": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 935
+                                      },
+                                      "env_climate_bio13": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 99
+                                      },
+                                      "env_climate_bio14": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 51
+                                      },
+                                      "env_climate_bio15": {
+                                        "type": "number"
+                                      },
+                                      "env_climate_bio16": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 284
+                                      },
+                                      "env_climate_bio17": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 180
+                                      },
+                                      "env_climate_bio18": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 180
+                                      },
+                                      "env_climate_bio19": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "example": 284
+                                      },
+                                      "std_date_span_month": {
+                                        "type": "object",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "std_month": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_pr": {
+                                              "type": "integer"
+                                            },
+                                            "env_climate_tasmax": {
+                                              "type": "number"
+                                            },
+                                            "env_climate_tasmin": {
+                                              "type": "number"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "9403"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
+                }
+              }
+            }
           }
         },
         "security": []
@@ -363,7 +2351,96 @@
         },
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "351"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
+                }
+              }
+            }
           }
         },
         "security": []
@@ -440,1081 +2517,96 @@
         },
         "responses": {
           "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/hash/": {
-      "get": {
-        "summary": "Point",
-        "description": "The service will return the *shape hash* related to the provided point coordinates.\n\nThe service expects two *query parameters*:\n\n- `lat`: The *latitude* of the point.\n- `lon`: The *longitude* of the point.\n\nThe service will return the following object:\n\n- `geometry`: The *GeoJSON* representation of the point.\n- `geometry_hash`: The *hash* for the point.",
-        "operationId": "5768bbe7-e8f3-47ee-aa50-5704f101da7e",
-        "parameters": [
-          {
-            "name": "lat",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "42",
-              "description": ""
-            }
-          },
-          {
-            "name": "lon",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "12",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The service will return the *shape hash* related to the provided point coordinates.\n\nThe service expects two *query parameters*:\n\n- `lat`: The *latitude* of the point.\n- `lon`: The *longitude* of the point.\n\nThe service will return the following object:\n\n- `geometry`: The *GeoJSON* representation of the point.\n- `geometry_hash`: The *hash* for the point.",
-          "content": {
-            "text/plain": {}
-          },
-          "required": false
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/hash/poly/": {
-      "post": {
-        "summary": "Polygon",
-        "description": "The service will return the *shape hash* related to the provided polygon coordinates.\n\nThe service expects a `oordinates` *body parameter* containing the polygon coordinates.\nThe polygon shape should be provided at least as one array representing a *linear ring*.\nEach linear ring should consist of an array with at least *four longitude/latitude pairs*.\nThe *first* linear ring must be the *outermost*, while any *subsequent* linear rings will be interpreted as *holes*.\nThe *order* of the sequence of coordinates is important: *counter-clock* means the polygon *area* is *inside*, *clockwise* means the *area* of the polygon is *outside*.\n\nThe service will return the following object:\n\n- `geometry`: The *GeoJSON* representation of the polygon.\n- `geometry_hash`: The *hash* for the polygon.",
-        "operationId": "e95f1620-610e-4897-a571-2489e0176caa",
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json; charset=utf-8",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The service will return the *shape hash* related to the provided polygon coordinates.\n\nThe service expects a `oordinates` *body parameter* containing the polygon coordinates.\nThe polygon shape should be provided at least as one array representing a *linear ring*.\nEach linear ring should consist of an array with at least *four longitude/latitude pairs*.\nThe *first* linear ring must be the *outermost*, while any *subsequent* linear rings will be interpreted as *holes*.\nThe *order* of the sequence of coordinates is important: *counter-clock* means the polygon *area* is *inside*, *clockwise* means the *area* of the polygon is *outside*.\n\nThe service will return the following object:\n\n- `geometry`: The *GeoJSON* representation of the polygon.\n- `geometry_hash`: The *hash* for the polygon.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "coordinates": {
-                    "type": "object",
-                    "items": {
-                      "type": "array",
-                      "items": {
-                        "type": "array",
-                        "items": {
-                          "type": "integer"
-                        }
-                      }
-                    }
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
                   }
                 }
               }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/hash/multipoly/": {
-      "post": {
-        "summary": "MultiPolygon",
-        "description": "The service will return the *shape hash* related to the provided multi-polygon coordinates.\n\nThe MultiPolygon shape should be provided as an *array* of *Polygon shapes*.\nThe polygon shape should be provided at least as *one array* representing a *linear ring*.\nEach linear ring should consist of an array with at least *four longitude/latitude pairs*.\nThe *first* linear ring must be the *outermost*, while any *subsequent* linear ring will be interpreted as *holes*.\nThe *order* of the sequence of coordinates is important: *ounter-clock* means the polygon area is *inside*, *clockwise* means the are of the polygon is *outside*.\n\nThe service will return the following object:\n\n- `geometry`: The *GeoJSON* representation of the multi-polygon.\n- `geometry_hash`: The *hash* for the multi-polygon.",
-        "operationId": "184bf6ce-7511-4de4-af57-8590e1c64db9",
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "text/plain; charset=utf-8",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The service will return the *shape hash* related to the provided multi-polygon coordinates.\n\nThe MultiPolygon shape should be provided as an *array* of *Polygon shapes*.\nThe polygon shape should be provided at least as *one array* representing a *linear ring*.\nEach linear ring should consist of an array with at least *four longitude/latitude pairs*.\nThe *first* linear ring must be the *outermost*, while any *subsequent* linear ring will be interpreted as *holes*.\nThe *order* of the sequence of coordinates is important: *ounter-clock* means the polygon area is *inside*, *clockwise* means the are of the polygon is *outside*.\n\nThe service will return the following object:\n\n- `geometry`: The *GeoJSON* representation of the multi-polygon.\n- `geometry_hash`: The *hash* for the multi-polygon.",
-          "content": {
-            "text/plain": {
-              "schema": {
-                "type": "string",
-                "example": "{\n\"coordinates\": [ [ [[40, 40], [20, 45], [45, 30], [40, 40]] ], [ [[20, 35], [10, 30], [10, 10], [30, 5], [45, 20], [20, 35]], [[30, 20], [20, 15], [20, 25], [30, 20]] ] ]\n}"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/gcu/shape/": {
-      "get": {
-        "summary": "Unit by unit ID",
-        "description": "The service will return the *unit record* and the *list* of *unit shape references* related to the *provided unit ID*.\n\nThe service expects the `gcu_id_number` query parameter containing a unit number.\n\nThe service will return the following object:\n\n- `gcu_id_number`: The *unit number* associated with the *provided unit ID*.\n- `geometry_hash_list`: The *list* of *shape references* associated with the *provided unit ID*.\n\nThe record may also contain the following fields:\n\n- `geometry`: The unit geometries.\n- `geometry_bounds`: The unit geometries bounding box.\n- `properties`: Topographic property averages for the unit shapes.\n",
-        "operationId": "571d5e41-d1b3-4a23-af71-807200e790a2",
-        "parameters": [
-          {
-            "name": "gcu_id_number",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "CHE00006",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The service will return the *unit record* and the *list* of *unit shape references* related to the *provided unit ID*.\n\nThe service expects the `gcu_id_number` query parameter containing a unit number.\n\nThe service will return the following object:\n\n- `gcu_id_number`: The *unit number* associated with the *provided unit ID*.\n- `geometry_hash_list`: The *list* of *shape references* associated with the *provided unit ID*.\n\nThe record may also contain the following fields:\n\n- `geometry`: The unit geometries.\n- `geometry_bounds`: The unit geometries bounding box.\n- `properties`: Topographic property averages for the unit shapes.\n",
-          "content": {
-            "text/plain": {}
-          },
-          "required": false
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/gcu/rec/": {
-      "get": {
-        "summary": "Unit by geometry reference",
-        "description": "The service will return the *unit number* associated with the provided *shape reference* and the *full* list of related shape identifiers.\n\nThe service expects the `geometry_hash` query parameter containing a *unit shape geometry reference*.\n\nThe service will return the following object:\n\n- `gcu_id_number`: The *unit number* associated with the *provided unit ID*.\n- `geometry_hash_list`: The *list* of *shape references* associated with the *provided unit ID*.\n\nThe record may also contain the following fields:\n\n- `geometry`: The unit geometries.\n- `geometry_bounds`: The unit geometries bounding box.\n- `properties`: Topographic property averages for the unit shapes.\n",
-        "operationId": "8ebe0f0f-bdc5-4829-a62c-b45e989b7dd4",
-        "parameters": [
-          {
-            "name": "geometry_hash",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "46164fdefc87fad25fc55e0146bae752",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The service will return the *unit number* associated with the provided *shape reference* and the *full* list of related shape identifiers.\n\nThe service expects the `geometry_hash` query parameter containing a *unit shape geometry reference*.\n\nThe service will return the following object:\n\n- `gcu_id_number`: The *unit number* associated with the *provided unit ID*.\n- `geometry_hash_list`: The *list* of *shape references* associated with the *provided unit ID*.\n\nThe record may also contain the following fields:\n\n- `geometry`: The unit geometries.\n- `geometry_bounds`: The unit geometries bounding box.\n- `properties`: Topographic property averages for the unit shapes.\n",
-          "content": {
-            "text/plain": {}
-          },
-          "required": false
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/gcu/click/": {
-      "get": {
-        "summary": "Unit by point",
-        "description": "The service will return the *unit record* whose shape intersects with the *provided point* coordinate.\n\nThe service expects the `lat` and `lon` query parameters representing respectively the *latitude* and *longitude* of the point coordinate.",
-        "operationId": "57e2d0a5-16e9-4b51-bf1b-fb4cc1f00991",
-        "parameters": [
-          {
-            "name": "lat",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "41.83",
-              "description": ""
-            }
-          },
-          {
-            "name": "lon",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "16.02",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The service will return the *unit record* whose shape intersects with the *provided point* coordinate.\n\nThe service expects the `lat` and `lon` query parameters representing respectively the *latitude* and *longitude* of the point coordinate.",
-          "content": {
-            "text/plain": {}
-          },
-          "required": false
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/shape/search/": {
-      "post": {
-        "summary": "Geometry search",
-        "description": "The service will return shape records according to a set of provided query parameters.\n\nThe selection criteria is structured as follows:\n\n- `geometry_hash_list`: List of shape geometry hashes.\n- `std_dataset_ids`: List of dataset identifiers.\n- `geo_shape_area`: Shape area range, limits included.\n- `chr_AvElevation`: Shape average elevation range, limits included.\n- `chr_StdElevation`: Shape average elevation standard deviation range, limits included.\n- `chr_AvSlope`: Shape average slope range, limits included.\n- `chr_AvAspect`: Shape average area range, limits included.\n- `intersects`: GeoJSON geometry that intersects shape bounding boxes.\n- `distance`: Provide the GeoJSON shape in reference and the distance range in range.\n- `paging`: Paging: provide `offset` and `limit` properties, or omit the property to return all available data.\n\nWhen filling the search criteria either provide a value or omit the corresponding property.\nRange values are included in the expected range, it is also possible to omit one of the terms.\nDistance and elevation ranges are expected to be expressed in meters.\n",
-        "operationId": "07d3ee03-91b6-4ae4-9f65-aae121675f20",
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json; charset=utf-8",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The service will return shape records according to a set of provided query parameters.\n\nThe selection criteria is structured as follows:\n\n- `geometry_hash_list`: List of shape geometry hashes.\n- `std_dataset_ids`: List of dataset identifiers.\n- `geo_shape_area`: Shape area range, limits included.\n- `chr_AvElevation`: Shape average elevation range, limits included.\n- `chr_StdElevation`: Shape average elevation standard deviation range, limits included.\n- `chr_AvSlope`: Shape average slope range, limits included.\n- `chr_AvAspect`: Shape average area range, limits included.\n- `intersects`: GeoJSON geometry that intersects shape bounding boxes.\n- `distance`: Provide the GeoJSON shape in reference and the distance range in range.\n- `paging`: Paging: provide `offset` and `limit` properties, or omit the property to return all available data.\n\nWhen filling the search criteria either provide a value or omit the corresponding property.\nRange values are included in the expected range, it is also possible to omit one of the terms.\nDistance and elevation ranges are expected to be expressed in meters.\n",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "paging": {
-                    "type": "object",
-                    "properties": {
-                      "limit": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 100
-                      },
-                      "offset": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 0
-                      }
-                    }
-                  },
-                  "chr_AvElevation": {
-                    "type": "object",
-                    "properties": {
-                      "min": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 220
-                      },
-                      "max": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 930
-                      }
-                    }
-                  },
-                  "distance": {
-                    "type": "object",
-                    "properties": {
-                      "range": {
-                        "type": "object",
-                        "properties": {
-                          "min": {
-                            "type": "integer",
-                            "format": "int64",
-                            "example": 0
-                          },
-                          "max": {
-                            "type": "integer",
-                            "format": "int64",
-                            "example": 500000000
-                          }
-                        }
-                      },
-                      "reference": {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "example": "Point"
-                          },
-                          "coordinates": {
-                            "type": "number",
-                            "items": {
-                              "type": "number"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "geometry_hash_list": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "02f184cfb58d5d8cb3b0769cb2631c94",
-                      "3bb8b24468aa2ddee2941a7455dcbc81"
-                    ]
-                  },
-                  "std_dataset_ids": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "814b4937-3bbd-47c7-99d5-2cd51a0f3469"
-                    ]
-                  },
-                  "chr_AvAspect": {
-                    "type": "object",
-                    "properties": {
-                      "min": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 150
-                      },
-                      "max": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 190
-                      }
-                    }
-                  },
-                  "intersects": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "type": "string",
-                        "example": "Polygon"
-                      },
-                      "coordinates": {
-                        "type": "object",
-                        "items": {
-                          "type": "array",
-                          "items": {
-                            "type": "array",
-                            "items": {
-                              "type": "number"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "chr_AvSlope": {
-                    "type": "object",
-                    "properties": {
-                      "min": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 1
-                      },
-                      "max": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 30
-                      }
-                    }
-                  },
-                  "geo_shape_area": {
-                    "type": "object",
-                    "properties": {
-                      "min": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 32922692
-                      },
-                      "max": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 39275174
-                      }
-                    }
-                  },
-                  "chr_StdElevation": {
-                    "type": "object",
-                    "properties": {
-                      "min": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 5
-                      },
-                      "max": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 450
-                      }
-                    }
-                  }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "141"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
                 }
               }
             }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/shape/": {
-      "get": {
-        "summary": "Geometry by reference",
-        "description": "The service will return the *shape record* identified by the *provided geometry hash*.\n\nThe service expects the `geometry_hash` query parameter with the *shape reference*.\n\nThe `geometry_hash` property of the returned record corresponds to the `_key` property of the shape record.",
-        "operationId": "0a34efec-a7a8-43e0-a37c-a2ed7786941a",
-        "parameters": [
-          {
-            "name": "geometry_hash",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "0df76d46196094c8bade10e30faf6ae0",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The service will return the *shape record* identified by the *provided geometry hash*.\n\nThe service expects the `geometry_hash` query parameter with the *shape reference*.\n\nThe `geometry_hash` property of the returned record corresponds to the `_key` property of the shape record.",
-          "content": {
-            "text/plain": {}
-          },
-          "required": false
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/shape/click/": {
-      "get": {
-        "summary": "Geometry by point",
-        "description": "The service will return the *shape record* whose bounds intersect with the *provided point* coordinate.\n\nThe service expects the `lat` and `lon` query parameters representing respectively the *latitude* and *longitude* of the point coordinate.\n\nThe `geometry_hash` property of the returned record corresponds to the `_key` property of the shape record.",
-        "operationId": "e34797a0-0576-42f0-a89d-323eea8e1e9d",
-        "parameters": [
-          {
-            "name": "lat",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "41.83",
-              "description": ""
-            }
-          },
-          {
-            "name": "lon",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "16.02",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The service will return the *shape record* whose bounds intersect with the *provided point* coordinate.\n\nThe service expects the `lat` and `lon` query parameters representing respectively the *latitude* and *longitude* of the point coordinate.\n\nThe `geometry_hash` property of the returned record corresponds to the `_key` property of the shape record.",
-          "content": {
-            "text/plain": {}
-          },
-          "required": false
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/rs/meta/span/shape/": {
-      "post": {
-        "summary": "Shape metadata by time span",
-        "description": "This service will return the *summary* of *all data measurements* selected by the provided search parameters *grouped by date span*.\n\nThe service expects a series of search parameters in the body object:\n\n- `geometry_hash_list`: *Required* list of GCU shape references, as MD5 hash of geometry.\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each date span:\n\n- `count`: The number of selected data records.\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_start`: Dates range minimum.\n- `std_date_end`: Dates range maximum.\n- `std_terms`: List of featured variable names.\n- `std_dataset_ids`: List of featured dataset references.",
-        "operationId": "d7fc2260-724a-4bbc-9223-e8b95602ec71",
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json; charset=utf-8",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "This service will return the *summary* of *all data measurements* selected by the provided search parameters *grouped by date span*.\n\nThe service expects a series of search parameters in the body object:\n\n- `geometry_hash_list`: *Required* list of GCU shape references, as MD5 hash of geometry.\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each date span:\n\n- `count`: The number of selected data records.\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_start`: Dates range minimum.\n- `std_date_end`: Dates range maximum.\n- `std_terms`: List of featured variable names.\n- `std_dataset_ids`: List of featured dataset references.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "geometry_hash_list": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "5884f50ccde8024a30d84cf29c12c3ed",
-                      "6117b4b921bbe98c0ee8c5a253132634"
-                    ]
-                  },
-                  "std_date_start": {
-                    "type": "string",
-                    "example": "2000"
-                  },
-                  "std_date_span": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "std_date_span_day",
-                      "std_date_span_month",
-                      "std_date_span_year"
-                    ]
-                  },
-                  "std_date_end": {
-                    "type": "string",
-                    "example": "2023"
-                  },
-                  "std_dataset_ids": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "5f9c61fc-8a82-41b5-b2ae-42c0068cfb6e",
-                      "9f0b933b-a6e7-435d-a1ba-c49c10c94c52",
-                      "647be387-4dda-4257-a7c8-e5c47e90ccc9",
-                      "750b614a-8dbc-49e0-85e2-8279c2b80269",
-                      "08e0810c-c259-409b-8626-e8699540cfaa",
-                      "d9f9676f-d31e-4f31-80d7-fd00909039aa",
-                      "5161a461-1fb1-46df-89de-fd1caab906e7",
-                      "cfe881bd-65f3-4c4c-a0fb-c0b9fd35ea51",
-                      "2a9ca201-0b15-495f-ad65-c138886986df"
-                    ]
-                  },
-                  "std_terms": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "chr_RelHumid",
-                      "env_climate_temp-2m",
-                      "chr_LandSurfTemp",
-                      "chr_AvLeafAreaIdx",
-                      "chr_AvBiomass"
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/rs/meta/span/unit/": {
-      "post": {
-        "summary": "Unit metadata by time span",
-        "description": "This service will return the *summary* of *all data measurements* selected by the provided search parameters *grouped by date span*.\n\nThe service expects a series of search parameters in the body object:\n\n- `gcu_id_number_list`: *Required* list of GCU unit numbers.\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each date span:\n\n- `count`: The number of selected data records.\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_start`: Dates range minimum.\n- `std_date_end`: Dates range maximum.\n- `std_terms`: List of featured variable names.\n- `std_dataset_ids`: List of featured dataset references.",
-        "operationId": "3d617397-50e3-41c4-a00e-b3483eec34f8",
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json; charset=utf-8",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "This service will return the *summary* of *all data measurements* selected by the provided search parameters *grouped by date span*.\n\nThe service expects a series of search parameters in the body object:\n\n- `gcu_id_number_list`: *Required* list of GCU unit numbers.\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each date span:\n\n- `count`: The number of selected data records.\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_start`: Dates range minimum.\n- `std_date_end`: Dates range maximum.\n- `std_terms`: List of featured variable names.\n- `std_dataset_ids`: List of featured dataset references.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "std_date_start": {
-                    "type": "string",
-                    "example": "2000"
-                  },
-                  "std_terms": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "chr_RelHumid",
-                      "env_climate_temp-2m",
-                      "chr_LandSurfTemp",
-                      "chr_AvLeafAreaIdx",
-                      "chr_AvBiomass"
-                    ]
-                  },
-                  "std_date_span": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "std_date_span_day",
-                      "std_date_span_month",
-                      "std_date_span_year"
-                    ]
-                  },
-                  "std_date_end": {
-                    "type": "string",
-                    "example": "2023"
-                  },
-                  "std_dataset_ids": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "5f9c61fc-8a82-41b5-b2ae-42c0068cfb6e",
-                      "9f0b933b-a6e7-435d-a1ba-c49c10c94c52",
-                      "647be387-4dda-4257-a7c8-e5c47e90ccc9",
-                      "750b614a-8dbc-49e0-85e2-8279c2b80269",
-                      "08e0810c-c259-409b-8626-e8699540cfaa",
-                      "d9f9676f-d31e-4f31-80d7-fd00909039aa",
-                      "5161a461-1fb1-46df-89de-fd1caab906e7",
-                      "cfe881bd-65f3-4c4c-a0fb-c0b9fd35ea51",
-                      "2a9ca201-0b15-495f-ad65-c138886986df"
-                    ]
-                  },
-                  "gcu_id_number_list": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "ITA00001",
-                      "AUT00001"
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/rs/meta/shape/": {
-      "post": {
-        "summary": "Shape metadata by geometry and time span",
-        "description": "This service will return the *summary* of *all data measurements* selected by the provided search parameters grouped by *shape* and *date span*.\n\nThe service expects a series of search parameters in the body object:\n\n- `geometry_hash_list`: *Required* list of GCU shape references, as MD5 hash of geometry.\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each shape:\n\n- `geometry_hash`: The shape reference.\n- `properties`: Shape summary data grouped by date span, described below:\n- `count`: The number of selected data records.\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_start`: Dates range minimum.\n- `std_date_end`: Dates range maximum.\n- `std_terms`: List of featured variable names.\n- `std_dataset_ids`: List of featured dataset references.",
-        "operationId": "d64a4a3f-3744-4da3-80cf-13b8be9bddc5",
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json; charset=utf-8",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "This service will return the *summary* of *all data measurements* selected by the provided search parameters grouped by *shape* and *date span*.\n\nThe service expects a series of search parameters in the body object:\n\n- `geometry_hash_list`: *Required* list of GCU shape references, as MD5 hash of geometry.\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each shape:\n\n- `geometry_hash`: The shape reference.\n- `properties`: Shape summary data grouped by date span, described below:\n- `count`: The number of selected data records.\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_start`: Dates range minimum.\n- `std_date_end`: Dates range maximum.\n- `std_terms`: List of featured variable names.\n- `std_dataset_ids`: List of featured dataset references.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "geometry_hash_list": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "5884f50ccde8024a30d84cf29c12c3ed",
-                      "6117b4b921bbe98c0ee8c5a253132634"
-                    ]
-                  },
-                  "std_date_start": {
-                    "type": "string",
-                    "example": "2000"
-                  },
-                  "std_date_span": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "std_date_span_day",
-                      "std_date_span_month",
-                      "std_date_span_year"
-                    ]
-                  },
-                  "std_date_end": {
-                    "type": "string",
-                    "example": "2023"
-                  },
-                  "std_dataset_ids": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "5f9c61fc-8a82-41b5-b2ae-42c0068cfb6e",
-                      "9f0b933b-a6e7-435d-a1ba-c49c10c94c52",
-                      "647be387-4dda-4257-a7c8-e5c47e90ccc9",
-                      "750b614a-8dbc-49e0-85e2-8279c2b80269",
-                      "08e0810c-c259-409b-8626-e8699540cfaa",
-                      "d9f9676f-d31e-4f31-80d7-fd00909039aa",
-                      "5161a461-1fb1-46df-89de-fd1caab906e7",
-                      "cfe881bd-65f3-4c4c-a0fb-c0b9fd35ea51",
-                      "2a9ca201-0b15-495f-ad65-c138886986df"
-                    ]
-                  },
-                  "std_terms": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "chr_RelHumid",
-                      "env_climate_temp-2m",
-                      "chr_LandSurfTemp",
-                      "chr_AvLeafAreaIdx",
-                      "chr_AvBiomass"
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/rs/meta/unit/": {
-      "post": {
-        "summary": "Unit metadata by geometry and time span",
-        "description": "This service will return the *summary* of *all data measurements* selected by the provided search parameters grouped by *unit number* and *date span*.\n\nThe service expects a series of search parameters in the body object:\n\n- `gcu_id_number_list`: *Required* list of GCU unit numbers.\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each shape:\n\n- `gcu_id_number`: The unit number.\n- `properties`: Shape summary data grouped by date span, described below:\n- `count`: The number of selected data records.\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_start`: Dates range minimum.\n- `std_date_end`: Dates range maximum.\n- `std_terms`: List of featured variable names.\n- `std_dataset_ids`: List of featured dataset references.",
-        "operationId": "f5235fc7-2bf2-419f-acc7-78df4db8b613",
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json; charset=utf-8",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "This service will return the *summary* of *all data measurements* selected by the provided search parameters grouped by *unit number* and *date span*.\n\nThe service expects a series of search parameters in the body object:\n\n- `gcu_id_number_list`: *Required* list of GCU unit numbers.\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each shape:\n\n- `gcu_id_number`: The unit number.\n- `properties`: Shape summary data grouped by date span, described below:\n- `count`: The number of selected data records.\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_start`: Dates range minimum.\n- `std_date_end`: Dates range maximum.\n- `std_terms`: List of featured variable names.\n- `std_dataset_ids`: List of featured dataset references.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "std_date_start": {
-                    "type": "string",
-                    "example": "2000"
-                  },
-                  "std_terms": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "chr_RelHumid",
-                      "env_climate_temp-2m",
-                      "chr_LandSurfTemp",
-                      "chr_AvLeafAreaIdx",
-                      "chr_AvBiomass"
-                    ]
-                  },
-                  "std_date_span": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "std_date_span_day",
-                      "std_date_span_month",
-                      "std_date_span_year"
-                    ]
-                  },
-                  "std_date_end": {
-                    "type": "string",
-                    "example": "2023"
-                  },
-                  "std_dataset_ids": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "5f9c61fc-8a82-41b5-b2ae-42c0068cfb6e",
-                      "9f0b933b-a6e7-435d-a1ba-c49c10c94c52",
-                      "647be387-4dda-4257-a7c8-e5c47e90ccc9",
-                      "750b614a-8dbc-49e0-85e2-8279c2b80269",
-                      "08e0810c-c259-409b-8626-e8699540cfaa",
-                      "d9f9676f-d31e-4f31-80d7-fd00909039aa",
-                      "5161a461-1fb1-46df-89de-fd1caab906e7",
-                      "cfe881bd-65f3-4c4c-a0fb-c0b9fd35ea51",
-                      "2a9ca201-0b15-495f-ad65-c138886986df"
-                    ]
-                  },
-                  "gcu_id_number_list": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "ITA00001",
-                      "AUT00001"
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/rs/data/shape/": {
-      "post": {
-        "summary": "Data by geometry and time span",
-        "description": "This service will return *all data measurements* selected by the required *geometry hash* in the query path and *search parameters* in the body. The results will be grouped by *date span* and *measurement date*.\n\nThe service *requires* the shape reference to be provided in the query path and an *optional* series of search parameters in the body object:\n\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each selected date span, and within the span, one element for each measurement date:\n\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_series`: Shape data measurments for current date span:\n- `std_date`: Measurement date.\n- `properties`: Measurement variables.",
-        "operationId": "e56b916f-7711-4262-a380-dc65bc8aa731",
-        "parameters": [
-          {
-            "name": "geometry_hash",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "5884f50ccde8024a30d84cf29c12c3ed",
-              "description": ""
-            }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json; charset=utf-8",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "This service will return *all data measurements* selected by the required *geometry hash* in the query path and *search parameters* in the body. The results will be grouped by *date span* and *measurement date*.\n\nThe service *requires* the shape reference to be provided in the query path and an *optional* series of search parameters in the body object:\n\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each selected date span, and within the span, one element for each measurement date:\n\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_series`: Shape data measurments for current date span:\n- `std_date`: Measurement date.\n- `properties`: Measurement variables.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "std_date_start": {
-                    "type": "string",
-                    "example": "2010"
-                  },
-                  "std_date_span": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "std_date_span_day",
-                      "std_date_span_month",
-                      "std_date_span_year"
-                    ]
-                  },
-                  "std_date_end": {
-                    "type": "string",
-                    "example": "20101231"
-                  },
-                  "std_dataset_ids": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "5f9c61fc-8a82-41b5-b2ae-42c0068cfb6e",
-                      "9f0b933b-a6e7-435d-a1ba-c49c10c94c52",
-                      "647be387-4dda-4257-a7c8-e5c47e90ccc9",
-                      "750b614a-8dbc-49e0-85e2-8279c2b80269",
-                      "08e0810c-c259-409b-8626-e8699540cfaa",
-                      "d9f9676f-d31e-4f31-80d7-fd00909039aa",
-                      "5161a461-1fb1-46df-89de-fd1caab906e7",
-                      "cfe881bd-65f3-4c4c-a0fb-c0b9fd35ea51",
-                      "2a9ca201-0b15-495f-ad65-c138886986df"
-                    ]
-                  },
-                  "std_terms": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "chr_RelHumid",
-                      "env_climate_temp-2m",
-                      "chr_LandSurfTemp",
-                      "chr_AvLeafAreaIdx",
-                      "chr_AvBiomass"
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/rs/data/unit/": {
-      "post": {
-        "summary": "Data by unit and time span",
-        "description": "This service will return *all data measurements* selected by the required *unit number* in the query path and *search parameters* in the body. The results will be grouped by *date span* and *measurement date*.\n\nThe service *requires* the unit number to be provided in the query path and an *optional* series of search parameters in the body object:\n\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each selected date span, and within the span, one element for each measurement date:\n\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_series`: Shape data measurments for current date span:\n- `std_date`: Measurement date.\n- `properties`: Measurement variables.",
-        "operationId": "27b17d96-2107-41f5-bd41-d637f7f588ab",
-        "parameters": [
-          {
-            "name": "gcu_id_number",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "GBR00001",
-              "description": ""
-            }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json; charset=utf-8",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "This service will return *all data measurements* selected by the required *unit number* in the query path and *search parameters* in the body. The results will be grouped by *date span* and *measurement date*.\n\nThe service *requires* the unit number to be provided in the query path and an *optional* series of search parameters in the body object:\n\n- `std_date_span`: *Optional* list of requested date spans.\n- `std_date_start`: *Optional* minimum date.\n- `std_date_end`: *Optional* end date.\n- `std_terms`: *Optional* list of requested variable names.\n- `std_dataset_ids`: *Optional* list of requested dataset references.\n\nThe resulting data will contain one record for each selected date span, and within the span, one element for each measurement date:\n\n- `std_date_span`: Date span: daily, monthly or yearly.\n- `std_date_series`: Shape data measurments for current date span:\n- `std_date`: Measurement date.\n- `properties`: Measurement variables.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "std_date_start": {
-                    "type": "string",
-                    "example": "2010"
-                  },
-                  "std_date_span": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "std_date_span_day",
-                      "std_date_span_month",
-                      "std_date_span_year"
-                    ]
-                  },
-                  "std_date_end": {
-                    "type": "string",
-                    "example": "20101231"
-                  },
-                  "std_dataset_ids": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "5f9c61fc-8a82-41b5-b2ae-42c0068cfb6e",
-                      "9f0b933b-a6e7-435d-a1ba-c49c10c94c52",
-                      "647be387-4dda-4257-a7c8-e5c47e90ccc9",
-                      "750b614a-8dbc-49e0-85e2-8279c2b80269",
-                      "08e0810c-c259-409b-8626-e8699540cfaa",
-                      "d9f9676f-d31e-4f31-80d7-fd00909039aa",
-                      "5161a461-1fb1-46df-89de-fd1caab906e7",
-                      "cfe881bd-65f3-4c4c-a0fb-c0b9fd35ea51",
-                      "2a9ca201-0b15-495f-ad65-c138886986df"
-                    ]
-                  },
-                  "std_terms": {
-                    "type": "string",
-                    "items": {
-                      "type": "string"
-                    },
-                    "example": [
-                      "chr_RelHumid",
-                      "env_climate_temp-2m",
-                      "chr_LandSurfTemp",
-                      "chr_AvLeafAreaIdx",
-                      "chr_AvBiomass"
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
           }
         },
         "security": []
@@ -1523,7 +2615,7 @@
     "/{Protocol}:/{Host}:{Port}/_db/{Db}/{Path}/do/meta/resolution/": {
       "get": {
         "summary": "Metadata for resolution",
-        "description": "This service will return the list of all grid *resolutions* featured in the Drought Observatory data.\n\nThe resolution is axpressed as the distance between the centroids of two adjacent grid elements, divided by two and expressed in decimal degrees.\n\nThese values can be used, in the Drought Observatory data services, to select only specific data resolutions. The variable name for this value is `geometry_point_radius`.\n\nThe result is an array of objects:\n\n- `geometry_point_radius`: The resolution radius.\n- `count`: The total number of elements in the grid.",
+        "description": "This service will return the list of all grid *resolutions* featured in the Drought Observatory data.\n\nThe resolution is axpressed as the *distance* between the *centroids* of *two adjacent grid elements*, *divided by two* and expressed in *decimal degrees*.\n\nThese values can be used, in the Drought Observatory data services, to select only specific data resolutions. The variable name for this value is `geometry_point_radius`.\n\nThe result is an array of objects:\n\n- `geometry_point_radius`: The resolution radius.\n- `count`: The total number of elements in the grid.",
         "operationId": "9bf737a1-c8bd-47a6-93c3-72b302f1e283",
         "parameters": [
           {
@@ -1537,7 +2629,7 @@
           }
         ],
         "requestBody": {
-          "description": "This service will return the list of all grid *resolutions* featured in the Drought Observatory data.\n\nThe resolution is axpressed as the distance between the centroids of two adjacent grid elements, divided by two and expressed in decimal degrees.\n\nThese values can be used, in the Drought Observatory data services, to select only specific data resolutions. The variable name for this value is `geometry_point_radius`.\n\nThe result is an array of objects:\n\n- `geometry_point_radius`: The resolution radius.\n- `count`: The total number of elements in the grid.",
+          "description": "This service will return the list of all grid *resolutions* featured in the Drought Observatory data.\n\nThe resolution is axpressed as the *distance* between the *centroids* of *two adjacent grid elements*, *divided by two* and expressed in *decimal degrees*.\n\nThese values can be used, in the Drought Observatory data services, to select only specific data resolutions. The variable name for this value is `geometry_point_radius`.\n\nThe result is an array of objects:\n\n- `geometry_point_radius`: The resolution radius.\n- `count`: The total number of elements in the grid.",
           "content": {
             "application/json": {
               "schema": {
@@ -1739,7 +2831,180 @@
         },
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "count": {
+                        "type": "integer",
+                        "format": "int64",
+                        "example": 72
+                      },
+                      "std_date_start": {
+                        "type": "string",
+                        "example": "20040101"
+                      },
+                      "std_date_end": {
+                        "type": "string",
+                        "example": "20041221"
+                      },
+                      "std_terms": {
+                        "type": "string",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": [
+                          "env_climate_fapar",
+                          "env_climate_fapan",
+                          "chr_FPAR",
+                          "env_climate_smi",
+                          "env_climate_sma"
+                        ]
+                      },
+                      "std_dataset_ids": {
+                        "type": "string",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": [
+                          "056e569a-66ef-4033-8d15-5c4c3c36c1bb",
+                          "9eda6111-c840-4862-9759-4a805cd6fc35"
+                        ]
+                      },
+                      "geometry_point_radius": {
+                        "type": "number",
+                        "items": {
+                          "type": "number"
+                        }
+                      },
+                      "geometry_point": {
+                        "type": "object",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "coordinates": {
+                              "type": "array",
+                              "items": {
+                                "type": "number"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "geometry_bounds": {
+                        "type": "object",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "coordinates": {
+                              "type": "array",
+                              "items": {
+                                "type": "array",
+                                "items": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "number"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "848"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
+                }
+              }
+            }
           }
         },
         "security": []
@@ -2083,7 +3348,167 @@
         },
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "geometry_point_radius": {
+                        "type": "number"
+                      },
+                      "geometry_point": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "example": "Point"
+                          },
+                          "coordinates": {
+                            "type": "number",
+                            "items": {
+                              "type": "number"
+                            }
+                          }
+                        }
+                      },
+                      "geometry_bounds": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "example": "Polygon"
+                          },
+                          "coordinates": {
+                            "type": "object",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "array",
+                                "items": {
+                                  "type": "number"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "std_dataset_ids": {
+                        "type": "string",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": [
+                          "056e569a-66ef-4033-8d15-5c4c3c36c1bb"
+                        ]
+                      },
+                      "properties": {
+                        "type": "object",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "std_date": {
+                              "type": "string",
+                              "format": "utc-millisec"
+                            },
+                            "chr_FPAR": {
+                              "type": "number"
+                            },
+                            "env_climate_fapar": {
+                              "type": "number"
+                            },
+                            "env_climate_fapan": {
+                              "type": "number"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "7143"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
+                }
+              }
+            }
           }
         },
         "security": []
@@ -2189,7 +3614,119 @@
         },
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "std_date": {
+                        "type": "string",
+                        "example": "20040101"
+                      },
+                      "properties": {
+                        "type": "object",
+                        "properties": {
+                          "env_climate_fapan": {
+                            "type": "number"
+                          },
+                          "env_climate_fapar": {
+                            "type": "number"
+                          },
+                          "env_climate_sma": {
+                            "type": "number"
+                          },
+                          "env_climate_smi": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1434"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
+                }
+              }
+            }
           }
         },
         "security": []
@@ -2371,7 +3908,203 @@
         },
         "responses": {
           "200": {
-            "description": ""
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_key": {
+                        "type": "string",
+                        "example": "056e569a-66ef-4033-8d15-5c4c3c36c1bb"
+                      },
+                      "_collection_list": {
+                        "type": "string",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": [
+                          "DroughtObservatory"
+                        ]
+                      },
+                      "_description": {
+                        "type": "object",
+                        "properties": {
+                          "iso_639_3_eng": {
+                            "type": "string",
+                            "example": "fAPAR (fraction of Absorbed Photosynthetically Active Radiation): 10-day time composite, 1 km spatial resolution. Values derive as follows: MERIS from 2002 to 2011, SPOT-VEGETATION from 2012 to 2013, MODIS from 2014 onwards.\n\nAnomaly of fAPAR (fraction of Absorbed Photosynthetically Active Radiation): 10-day time composite, 1 km spatial resolution. Values derive as follows: MERIS from 2002 to 2011, SPOT-VEGETATION from 2012 to 2013, MODIS from 2014 onwards.\n\nThe fAPAR MODIS absorption values are retrieved from the web source https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mcd15a2, courtesy of the NASA EOSDIS Land Processes Distributed Active Archive Center (LP DAAC), USGS/Earth Resources Observation and Science (EROS) Center, Sioux Falls, South Dakota, United States of America.\n\nResolution: 0.04167 decimal degrees.\n\n**Publication**\nMyneni, R.B., S. Hoffman, Y. Knyazikhin, J. L. Privette, J. Glassy, Y. Tian, Y. Wang, X. Song, Y. Zhang, G.R. Smith, A. Lotsch, M. Friedl, J.T. Morisette, P. Votava, R.R. Nemani, and S.W. Running. 2002. Global Products of vegetation leaf area and fraction absorbed PAR from year one of MODIS data. Remote Sensing of Environment, 83, 214 –231.\nhttps://www.sciencedirect.com/science/article/pii/S0034425702000743?via%3Dihub"
+                          }
+                        }
+                      },
+                      "_title": {
+                        "type": "object",
+                        "properties": {
+                          "iso_639_3_eng": {
+                            "type": "string",
+                            "example": "Fraction of Absorbed Photosynthetically Active Radiation (FAPAR)"
+                          }
+                        }
+                      },
+                      "_url": {
+                        "type": "string",
+                        "items": {
+                          "type": "string",
+                          "format": "style"
+                        },
+                        "example": [
+                          "[European Drought Observatory](https://edo.jrc.ec.europa.eu/edov2/php/index.php?id=1000)"
+                        ]
+                      },
+                      "std_dataset": {
+                        "type": "string",
+                        "example": "EDO_FAPAR"
+                      },
+                      "std_dataset_group": {
+                        "type": "string",
+                        "example": "EDO"
+                      },
+                      "std_date_end": {
+                        "type": "string",
+                        "example": "20220921"
+                      },
+                      "std_date_start": {
+                        "type": "string",
+                        "example": "20020101"
+                      },
+                      "std_date_submission": {
+                        "type": "string",
+                        "example": "2023"
+                      },
+                      "std_project": {
+                        "type": "string",
+                        "example": "EUFGIS"
+                      },
+                      "std_terms": {
+                        "type": "string",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": [
+                          "env_climate_fapar",
+                          "env_climate_fapan",
+                          "chr_FPAR"
+                        ]
+                      },
+                      "std_terms_key": {
+                        "type": "string",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": [
+                          "geometry_hash",
+                          "std_date"
+                        ]
+                      },
+                      "std_terms_quant": {
+                        "type": "string",
+                        "items": {
+                          "type": "string"
+                        },
+                        "example": [
+                          "env_climate_fapar",
+                          "env_climate_fapan",
+                          "chr_FPAR"
+                        ]
+                      },
+                      "std_dataset_extent": {
+                        "type": "string",
+                        "example": "std_dataset_extent_region"
+                      },
+                      "std_dataset_scope": {
+                        "type": "string",
+                        "example": "std_dataset_scope_grid"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Pragma": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "Content-Security-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "frame-ancestors 'self'; form-action 'self';"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=31536000 ; includeSubDomains"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "ArangoDB"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0, s-maxage=0"
+                }
+              },
+              "Expires": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "2052"
+                }
+              },
+              "X-Arango-Queue-Time-Seconds": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.000000"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Close"
+                }
+              }
+            }
           }
         },
         "security": []
