@@ -85,10 +85,10 @@ function EDOMetadata(theLatitude, theLongitude, theFilter = {})
 		    FOR data IN ${DroughtObservatory}
 				${filter.data}
 		    
-			    COLLECT AGGREGATE start = MIN(data.std_date),
-			                      end   = MAX(data.std_date),
-			                      terms = UNIQUE(data.std_terms),
-			                      sets = UNIQUE(data.std_dataset_ids),
+			    COLLECT AGGREGATE start = MIN(shape.std_date_start),
+			                      end   = MAX(shape.std_date_end),
+			                      terms = UNIQUE(shape.std_terms),
+			                      sets = UNIQUE(shape.std_dataset_ids),
 			                      radius = UNIQUE(shape.geometry_point_radius),
 			                      points = UNIQUE(shape.geometry_point),
 			                      bounds = UNIQUE(shape.geometry),
@@ -760,20 +760,20 @@ function EDOQueryFilter(theFilter)
 				break
 
 			case 'std_date_start':
-				filter.data.push(aql`FILTER data.std_date >= ${value}`)
+				filter.shape.push(aql`FILTER shape.std_date_start >= ${value}`)
 				break
 
 			case 'std_date_end':
-				filter.data.push(aql`FILTER data.std_date <= ${value}`)
+				filter.shape.push(aql`FILTER shape.std_date_end <= ${value}`)
 				break
 
 			case 'std_terms':
 				filter.terms.push(...value)
-				filter.data.push(aql`FILTER ${value} ANY IN data.std_terms`)
+				filter.shape.push(aql`FILTER ${value} ANY IN shape.std_terms`)
 				break
 
 			case 'std_dataset_ids':
-				filter.data.push(aql`FILTER ${value} ANY IN data.std_dataset_ids`)
+				filter.shape.push(aql`FILTER ${value} ANY IN shape.std_dataset_ids`)
 				break
 
 			case 'geometry_point_radius':
