@@ -58,6 +58,26 @@ for (const [key, collection] of Object.entries(documentCollections))
 					fields: ['geometry'],
 					geoJson: true
 				})
+				coll.ensureIndex({
+					name: 'idx_dataset',
+					type: 'persistent',
+					fields: ['std_dataset_ids[*]']
+				})
+				coll.ensureIndex({
+					name: 'idx_terms',
+					type: 'persistent',
+					fields: ['std_terms[*]']
+				})
+				coll.ensureIndex({
+					name: 'idx_date_start',
+					type: 'persistent',
+					fields: ['std_date_start']
+				})
+				coll.ensureIndex({
+					name: 'idx_date_end',
+					type: 'persistent',
+					fields: ['std_date_end']
+				})
 				break
 		}
 	} else if (context.isProduction) {

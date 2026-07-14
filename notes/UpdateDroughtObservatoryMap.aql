@@ -1,0 +1,33 @@
+/**
+ * Update DroughtObservatoryMap collection in GeoService.
+ *
+ * Here we add the list of datasets related to the current geometry.
+ */
+LET links = {
+    env_climate_cdi:   "7b789ef4-aa2d-4f25-91c4-feab9d4cbb9b",
+    env_climate_fapar: "056e569a-66ef-4033-8d15-5c4c3c36c1bb",
+    env_climate_fapan: "056e569a-66ef-4033-8d15-5c4c3c36c1bb",
+    env_climate_smi:   "9eda6111-c840-4862-9759-4a805cd6fc35",
+    env_climate_tws:   "398f8b9b-9cd4-4fb5-bc4d-49b88a5d210a",
+    env_climate_cwd:   "6b12011e-ef30-47d4-b4a3-3c8bdc4b4464",
+    env_climate_hwd:   "6b12011e-ef30-47d4-b4a3-3c8bdc4b4464",
+    env_climate_smang: "7d56b72f-66bb-4813-8bdb-71d6d17a04c3",
+    env_climate_spi3:  "ba1dd88a-834f-40ce-9737-1dc49d9bf451"
+}
+
+FOR shape IN DroughtObservatoryMap
+RETURN {
+    _key: shape._key,
+    geometry_point_radius: shape.geometry_point_radius,
+    geometry_point: shape.geometry_point,
+    geometry: shape.geometry,
+    std_date_start: shape.std_date_start,
+    std_date_end: shape.std_date_end,
+    std_dataset_ids:
+        UNIQUE(
+            FOR t IN shape.std_terms
+            LET d = links[t] FILTER d != null
+            RETURN d
+        ),
+    std_terms: shape.std_terms
+}
