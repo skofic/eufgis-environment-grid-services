@@ -235,7 +235,7 @@ Both the `geometry_point` and the `geometry_bounds` fields are indexed with type
 
 ### DroughtObservatory
 
-This collection currently contains over 1.2 billion records from the [European Drought Observatory](https://edo.jrc.ec.europa.eu/edov2/php/index.php?id=1000) repository. It is a collection of measurements subdivided into a set of 1km., 5km. and 25 km. resolution grids covering the European region. Each record references a *specific layer cell* and *date*, all dates are daily.
+This collection currently contains over 1.7 billion records from the [European Drought Observatory](https://drought.emergency.copernicus.eu/tumbo/edo/map/) and [Global Drought Observatory](https://drought.emergency.copernicus.eu/tumbo/gdo/map/) repositories. It is a collection of measurements subdivided into a set of approximately 2.3km., 2.8km., 4.6km., 13.9km. and 55.7km. resolution grids covering the European and Southern Mediterranean region. Each record references a *specific layer cell* and *date*, all dates are daily.
 
 #### Data
 
@@ -277,7 +277,7 @@ The collection features a *unique* index on the `geometry_hash` and `std_date` f
 
 ### DroughtObservatoryMap
 
-This collection contains one record for each grid cell from the [European Drought Observatory](https://edo.jrc.ec.europa.eu/edov2/php/index.php?id=1000) repository, it contains almost 1.5 million records. It is used to record the geometry of the grid cells and to link`DroughtObservatory` collection time series.
+This collection contains one record for each grid cell from the [European Drought Observatory](https://edo.jrc.ec.europa.eu/edov2/php/index.php?id=1000) repository, it contains over 2 million records. It is used to record the geometry of the grid cells and to link`DroughtObservatory` collection time series.
 
 #### Data
 
@@ -285,7 +285,7 @@ Records follow this structure:
 
 ```json
 {
-  "_key": "2b79886df88dbac9822a7a1a00426fc2",
+  "_key": "00001c556c96447e528f8c1de7b9b1e7",
   "geometry": {
     "type": "Polygon",
     "coordinates": [ /* data */ ]
@@ -294,7 +294,15 @@ Records follow this structure:
     "type": "Point",
     "coordinates": [ /* data */ ]
   },
-  "geometry_point_radius": 0.020833335
+  "geometry_point_radius": 0.020833335,
+  "std_date_start": "20120101",
+  "std_date_end": "20251221",
+  "std_dataset_ids": [
+    "7b789ef4-aa2d-4f25-91c4-feab9d4cbb9b"
+  ],
+  "std_terms": [
+    "env_climate_cdi"
+  ]
 }
 ```
 
@@ -306,11 +314,17 @@ The `geometry_point` field contains the [GeoJSON](https://geojson.org) *point* r
 
 The `geometry_point_radius` field represents the resolution of the *grid cell*. The value is the distance between the centroids of *two adjacent grid cells*, *divided by 2* and expressed in *decimal degrees*.
 
+The `std_date_start` and `std_date_end` fields represent respectively the start and end dates of the time series data available in the current grid cell.
+
+The `std_dataset_ids` field contains the list of all dataset references featured in the current grid cell.
+
+The `std_terms` field contains the list of descriptors featured in the current grid cell.
+
 All properties are documented in the [data dictionary](https://github.com/skofic/data-dictionary-service.git).
 
 #### Index
 
-The collection features a single Geo index on the `geometry` property.
+The collection features a Geo index on the `geometry` property and an index on the `geometry_point_radius` property.
 
 ### Dataset
 

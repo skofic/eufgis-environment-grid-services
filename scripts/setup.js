@@ -155,24 +155,9 @@ function ensureIndexes(theCollectionKey, theColl)
 				geoJson: true
 			})
 			createIndexIfMissing({
-				name: 'idx_dataset',
+				name: 'idx_radius',
 				type: 'persistent',
-				fields: ['std_dataset_ids[*]']
-			})
-			createIndexIfMissing({
-				name: 'idx_terms',
-				type: 'persistent',
-				fields: ['std_terms[*]']
-			})
-			createIndexIfMissing({
-				name: 'idx_date_start',
-				type: 'persistent',
-				fields: ['std_date_start']
-			})
-			createIndexIfMissing({
-				name: 'idx_date_end',
-				type: 'persistent',
-				fields: ['std_date_end']
+				fields: ['geometry_point_radius']
 			})
 			break
 	}
